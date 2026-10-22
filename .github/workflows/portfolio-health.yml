@@ -1,0 +1,28 @@
+name: Portfolio checks and daily availability
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: portfolio-health
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify calculation invariants
+        run: node --test tests/models.test.cjs
+      - name: Check pages and metadata
+        run: python3 scripts/check_portfolio.py
+      - name: Check live pages on scheduled runs
+        if: github.event_name != 'push'
+        run: python3 scripts/check_live.py

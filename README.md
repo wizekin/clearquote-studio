@@ -35,3 +35,12 @@ If the calculator helps you, sharing the free link with another freelancer is ap
 ## Scope
 
 Example rates are illustrative rather than market recommendations. The tools are not financial, tax or legal advice. Gumroad processes toolkit purchases and digital delivery.
+
+
+## Wizekin portfolio expansion — 22 October 2026
+
+- [CraftCost Studio](https://wizekin.web.app/craftcost/): handmade batch costing and target-margin pricing.
+- [StockSimple Studio](https://wizekin.web.app/stocksimple/): inventory position and reorder planning.
+- [LessonSheet Studio](https://wizekin.web.app/lessonsheet/): printable arithmetic and answer keys.
+
+All three public tools are free and run in the browser. Separate offline editions are packaged privately; their purchase links remain inactive until real listings and delivery are verified. See [portfolio formulas and operations](docs/PORTFOLIO.md). Calculation and page checks run before Firebase deploys. A separate daily availability workflow uses a standard public-repository runner.

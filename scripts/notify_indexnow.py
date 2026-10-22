@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Submit only newly added/updated canonical ClearQuote pages to IndexNow.
+"""Submit only newly added/updated canonical Wizekin pages to IndexNow.
 
 Runs after successful Firebase deployment. Uses only Python standard library.
 The key is public by design; host its key.txt at the same website origin.
@@ -36,7 +36,7 @@ def sitemap_urls() -> list[str]:
     urls = [
         e.text.strip()
         for e in root.findall("s:url/s:loc", xmlns)
-        if e.text and (e.text.strip() == f"{ORIGIN}/" or e.text.strip().startswith(f"{ORIGIN}/clearquote/"))
+        if e.text and (e.text.strip().startswith(f"{ORIGIN}/"))
     ]
     return sorted(set(urls))
 
@@ -44,10 +44,10 @@ def sitemap_urls() -> list[str]:
 def canonical_url(source_path: str) -> str | None:
     if source_path == "public/index.html":
         return f"{ORIGIN}/"
-    if not source_path.startswith("public/clearquote/") or not source_path.endswith(".html"):
+    if not source_path.startswith("public/") or not source_path.endswith(".html"):
         return None
-    if source_path == "public/clearquote/index.html":
-        return f"{ORIGIN}/clearquote/"
+    if source_path.endswith("/index.html"):
+        return ORIGIN + "/" + source_path.removeprefix("public/").removesuffix("index.html")
     return ORIGIN + "/" + source_path.removeprefix("public/")
 
 

@@ -34,6 +34,11 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Check portfolio calculations and pages
+        run: |
+          node --test tests/models.test.cjs
+          python3 scripts/check_portfolio.py
+
       - name: Deploy to Firebase Hosting
         run: npx --yes firebase-tools@15.22.1 deploy --only hosting --project wisenkin --non-interactive
 
