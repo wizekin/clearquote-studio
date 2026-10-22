@@ -9,4 +9,5 @@ wrangler.jsonc
 README.md
 marketing/**
 netlify.toml
+firebase.json
 .assetsignore
