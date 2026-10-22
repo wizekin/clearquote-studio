@@ -1,0 +1,12 @@
+.git
+.git/**
+**/.git
+**/.git/**
+.wrangler
+.wrangler/**
+**/.wrangler/**
+wrangler.jsonc
+README.md
+marketing/**
+netlify.toml
+.assetsignore
