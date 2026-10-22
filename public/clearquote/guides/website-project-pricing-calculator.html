@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Website Project Pricing Calculator | ClearQuote Studio</title><meta name="description" content="Estimate a freelance website project price from pages, hours, your rate, costs, contingency and deposit. Free website quote calculator; no signup.">
+<link rel="canonical" href="https://wizekin.web.app/clearquote/guides/website-project-pricing-calculator.html"><meta name="theme-color" content="#0b1422">
+<meta property="og:type" content="website"><meta property="og:title" content="Free Website Project Pricing Calculator | ClearQuote Studio"><meta property="og:description" content="Estimate a freelance website project price from pages, hours, your rate, costs, contingency and deposit. Free website quote calculator; no signup."><meta property="og:url" content="https://wizekin.web.app/clearquote/guides/website-project-pricing-calculator.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Free Website Project Pricing Calculator","url":"https://wizekin.web.app/clearquote/guides/website-project-pricing-calculator.html","description":"Estimate a freelance website project price from pages, hours, your rate, costs, contingency and deposit. Free website quote calculator; no signup.","applicationCategory":"BusinessApplication","operatingSystem":"Any modern web browser","browserRequirements":"JavaScript enabled","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Pages and hours-based website estimating","Labor, expenses, contingency and tax breakdowns","Upfront deposit and remaining balance"]}</script>
+<style>
+:root{color-scheme:dark;--bg:#0b1422;--panel:#132337;--border:#3a5069;--text:#edf4fa;--soft:#c3d1dc;--accent:#8af0c9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);margin:0;font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--accent)}a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #82b9ff;outline-offset:3px}
+header,footer{background:#102137;padding:17px 18px}header nav,footer .inner{max-width:1050px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+main{max-width:1050px;margin:42px auto 78px;padding:0 21px}h1{font-size:clamp(2rem,5vw,3.35rem);line-height:1.11;letter-spacing:-.024em;margin:8px 0 18px}h2{font-size:clamp(1.4rem,3vw,1.8rem);line-height:1.25;margin:36px 0 12px}h3{font-size:1.14rem;line-height:1.4;margin:24px 0 9px}.lead{font-size:1.16rem;max-width:80ch;color:var(--soft)}.kicker{color:var(--accent);font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;margin:30px 0}.panel{background:var(--panel);border:1px solid var(--border);border-radius:17px;padding:24px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field label{display:block;font-size:.9rem;font-weight:700;line-height:1.35;margin:0 0 6px}.field input,.field select{width:100%;padding:10px 12px;color:var(--text);background:#091727;border:1px solid #657e94;border-radius:9px;font:inherit}
+small,.fine{font-size:.89rem;color:var(--soft)}.fine{margin:15px 0 0}.eyebrow{font-size:.82rem;font-weight:800;color:var(--accent);letter-spacing:.06em}.big{font-size:clamp(2rem,4.3vw,3rem);line-height:1.15;color:var(--accent);font-weight:850;overflow-wrap:anywhere;margin:10px 0 22px}.result{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--border)}.result strong{text-align:right;overflow-wrap:anywhere}.warning{color:#ffd19c;min-height:1.5em}.btn{display:inline-block;background:var(--accent);color:#082027;text-decoration:none;border-radius:10px;padding:11px 17px;font-weight:800;margin-top:22px}.info{padding:19px 24px;border:1px solid var(--border);border-radius:14px;background:#11283a}ul,ol{padding-left:24px}li{margin:.5em 0}.related{margin:28px 0;display:flex;gap:13px;flex-wrap:wrap}.related a{display:inline-block;background:#183046;border:1px solid var(--border);padding:8px 12px;border-radius:10px}table{border-collapse:collapse;width:100%}td,th{padding:11px;border:1px solid var(--border);text-align:left}
+@media(max-width:760px){.grid{grid-template-columns:1fr}main{margin-top:30px}.fields{grid-template-columns:1fr 1fr}}@media(max-width:475px){.fields{grid-template-columns:1fr}.panel{padding:18px}}
+</style></head>
+<body><header><nav aria-label="Main navigation"><a href="../"><strong>ClearQuote Studio</strong></a><span><a href="../#calculator">Project calculator</a> · <a href="../#free-tools">Free tools</a> · <a href="../#guides">Guides</a></span></nav></header>
+<main><p class="kicker">Free website quote calculator · No signup</p><h1>Free Website Project Pricing Calculator</h1><p class="lead">Calculate a starting estimate for a client website based on the number of pages, design/development time, revisions, expenses and payment terms. Change every assumption to match the actual scope.</p>
+
+<section class="grid" aria-label="Website project estimate tool"><form id="form" class="panel" novalidate><h2 style="margin-top:0">Build your website estimate</h2><div class="fields">
+<div class="field"><label for="currency">Currency</label><select id="currency"><option value="USD">USD</option><option value="EGP">EGP</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="CAD">CAD</option><option value="AUD">AUD</option></select></div>
+<div class="field"><label for="pages">Number of website pages</label><input id="pages" type="number" min="1" max="1000" step="1" value="5" required></div>
+<div class="field"><label for="pagehours">Work hours per page</label><input id="pagehours" type="number" min="0" max="1000" step=".5" value="3" required></div>
+<div class="field"><label for="setup">Discovery / setup hours</label><input id="setup" type="number" min="0" step=".5" value="4" required></div>
+<div class="field"><label for="testing">Testing / launch hours</label><input id="testing" type="number" min="0" step=".5" value="3" required></div>
+<div class="field"><label for="revisions">Hours allowed for revisions</label><input id="revisions" type="number" min="0" step=".5" value="3" required></div>
+<div class="field"><label for="rate">Your hourly planning rate</label><input id="rate" type="number" min="0" step=".01" value="45" required></div>
+<div class="field"><label for="expenses">Direct project costs</label><input id="expenses" type="number" min="0" step=".01" value="75" required></div>
+<div class="field"><label for="buffer">Contingency (%)</label><input id="buffer" type="number" min="0" max="100" step=".1" value="10" required></div>
+<div class="field"><label for="tax">Tax (%) if applicable</label><input id="tax" type="number" min="0" max="100" step=".1" value="0" required></div>
+<div class="field"><label for="deposit">Deposit (%)</label><input id="deposit" type="number" min="0" max="100" step=".1" value="30" required></div>
+</div><p class="fine">Inputs stay in your browser. These default values are examples, not prevailing rates. This calculator does not fetch market prices.</p></form>
+<section class="panel" aria-live="polite"><p class="eyebrow">ILLUSTRATIVE PROJECT QUOTE</p><div id="total" class="big">—</div>
+<div class="result"><span>Estimated hours</span><strong id="hours-out">—</strong></div>
+<div class="result"><span>Labor estimate</span><strong id="labor-out">—</strong></div>
+<div class="result"><span>Direct expenses</span><strong id="expenses-out">—</strong></div>
+<div class="result"><span>Contingency</span><strong id="buffer-out">—</strong></div>
+<div class="result"><span>Tax if applicable</span><strong id="tax-out">—</strong></div>
+<div class="result"><span>Upfront deposit</span><strong id="deposit-out">—</strong></div>
+<div class="result"><span>Balance after deposit</span><strong id="balance-out">—</strong></div>
+<p class="warning fine" id="warning" role="status"></p><a class="btn" href="../#calculator">Try the general project calculator →</a></section></section>
+<h2>How to estimate website project pricing</h2>
+<p>Instead of picking a total from another freelancer's price list, start with deliverables and estimate the time required for your own work. A five-page brochure website, a complicated e-commerce site and a custom web application aren't interchangeable just because each has five pages.</p>
+<p>For a basic illustrative five-page website, assume three hours per page, four hours for discovery, three hours for testing and launch, and three hours for expected revisions. That is <strong>25 planned hours</strong>. At an illustrative rate of $45 per hour, labor would be $1,125. With $75 in direct expenses, a 10% contingency adds $120, for a subtotal of <strong>$1,320 before taxes</strong>. A 30% deposit would be $396, leaving $924.</p>
+<h2>What to include in a website quote</h2><ul>
+<li><strong>Page complexity:</strong> distinguish simple content pages from custom designs, dynamic content and integrations.</li>
+<li><strong>Client materials:</strong> specify who provides copy, images, domain and hosting, and whether content entry is included.</li>
+<li><strong>Mobile and accessibility:</strong> record responsive layouts and what testing or accessibility work is included.</li>
+<li><strong>Revisions:</strong> name the review rounds and the process for out-of-scope requests.</li>
+<li><strong>Launch responsibilities:</strong> include or exclude deployment, DNS, analytics, training and ongoing support explicitly.</li>
+</ul>
+<h2>Choosing hourly versus fixed-price website work</h2><p>For an agreed set of pages and deliverables, a fixed quote may give the client more predictable spending. For exploratory integrations or changing requirements, hourly work with a clear budget cap may fit better. See <a href="hourly-vs-fixed-price-freelancing.html">hourly vs fixed-price freelancing</a> for trade-offs.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is a reasonable price for a five-page website?</h3><p>There is no single price that fits every freelancer, location, stack or client. Estimate your actual tasks, required expertise, business costs and contract terms. The default numbers above illustrate the calculation only.</p>
+<h3>Should a deposit be added to the quoted total?</h3><p>No. A deposit normally pays part of the agreed total. The remaining balance is the total less the deposit. Specify due dates and refund terms in your agreement.</p>
+<h3>Does this include hosting, domain renewals and maintenance?</h3><p>Only if you enter their project-specific costs or add the hours required. Recurring services should usually be described separately, along with any ongoing fees.</p>
+<h3>What if the scope changes after approval?</h3><p>Describe the requested change, estimate its additional cost and timeline, and get the client's agreement before performing the extra work. Our <a href="how-to-create-a-freelance-quote.html">freelance quote checklist</a> walks through that process.</p>
+<nav class="related" aria-label="Related free tools"><a href="../#calculator">Project pricing calculator</a><a href="freelance-hourly-rate-calculator.html">Hourly-rate calculator</a><a href="freelance-deposit-calculator.html">Deposit calculator</a><a href="website-project-pricing-calculator.html">Website estimate calculator</a><a href="freelance-project-profit-margin-calculator.html">Profit margin calculator</a></nav>
+<p class="fine">Free educational planning tools, not personalized financial, accounting, legal or tax advice. Example numbers do not imply typical market prices or guaranteed profits.</p>
+</main><footer><div class="inner"><span>© 2026 ClearQuote Studio</span><a href="../#privacy">Privacy and limitations</a></div></footer>
+<script>(()=>{'use strict';
+const el=id=>document.getElementById(id);
+const fields=['pages','pagehours','setup','testing','revisions','rate','expenses','buffer','tax','deposit'];
+const limits={pages:[1,1000],pagehours:[0,1000],setup:[0,10000],testing:[0,10000],revisions:[0,10000],rate:[0,1000000],expenses:[0,100000000],buffer:[0,100],tax:[0,100],deposit:[0,100]};
+const money=value=>new Intl.NumberFormat('en-US',{style:'currency',currency:el('currency').value,maximumFractionDigits:2}).format(value);
+const show=(id,value)=>{el(id).textContent=value};
+function calculate(){
+ const v={};let valid=true;
+ for(const id of fields){const raw=el(id).value.trim(),n=raw===''?NaN:Number(raw),[lo,hi]=limits[id];v[id]=n;if(!Number.isFinite(n)||n<lo||n>hi)valid=false}
+ if(!valid||!Number.isInteger(v.pages)){
+ for(const id of ['total','hours-out','labor-out','expenses-out','buffer-out','tax-out','deposit-out','balance-out'])show(id,'—');
+ show('warning','Enter a whole number of pages (1–1000), nonnegative hours and costs, and percentages between 0 and 100.');return;
+ }
+ const hours=v.pages*v.pagehours+v.setup+v.testing+v.revisions;
+ const labor=hours*v.rate,base=labor+v.expenses,contingency=base*v.buffer/100,tax=(base+contingency)*v.tax/100,total=base+contingency+tax;
+ if(!Number.isFinite(total)||total>1e12){show('warning','The estimate is too large. Reduce the inputs.');return}
+ const upfront=total*v.deposit/100;
+ show('hours-out',hours.toLocaleString('en-US',{maximumFractionDigits:1})+' hours');
+ show('labor-out',money(labor));show('expenses-out',money(v.expenses));show('buffer-out',money(contingency));show('tax-out',money(tax));show('total',money(total));show('deposit-out',money(upfront));show('balance-out',money(total-upfront));show('warning','Estimates are illustrative. Define page complexity, content responsibilities and revision limits in the actual quote.');
+}
+el('form').addEventListener('input',calculate);el('form').addEventListener('change',calculate);calculate();
+})();</script></body></html>
