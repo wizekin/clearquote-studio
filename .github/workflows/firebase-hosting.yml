@@ -33,4 +33,4 @@ jobs:
           node-version: '22'
 
       - name: Deploy to Firebase Hosting
-        run: npx --yes firebase-tools@latest deploy --only hosting --project wisenkin --non-interactive
+        run: npx --yes firebase-tools@15.22.1 deploy --only hosting --project wisenkin --non-interactive
