@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Authenticate to Google Cloud (keyless)
         uses: google-github-actions/auth@v2
@@ -34,3 +36,8 @@ jobs:
 
       - name: Deploy to Firebase Hosting
         run: npx --yes firebase-tools@15.22.1 deploy --only hosting --project wisenkin --non-interactive
+
+      - name: Notify IndexNow of new and updated public pages
+        if: github.event_name == 'push'
+        continue-on-error: true
+        run: python3 scripts/notify_indexnow.py
