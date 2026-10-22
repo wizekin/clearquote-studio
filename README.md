@@ -1,24 +1,34 @@
-# ClearQuote Studio — public marketing website
+# ClearQuote Studio — Free Freelance Pricing Tools
 
-Source for the free freelance pricing calculator, educational guides, and the one-time downloadable ClearQuote Studio toolkit.
+**Live website:** https://wizekin.web.app/clearquote/
 
-- **Source branch:** `clearquote-studio-site` in https://github.com/wizekin/wizekin
-- **Live Gumroad listing:** https://wizekin.gumroad.com/l/wnmrl
-- **Verified Gumroad price on 2026-10-21:** $3 introductory one-time purchase
-- **Hosting:** GitHub contains the source code; the public marketing website is not deployed until a commercial-compatible hosting provider is configured.
-- **Hosting recommendation:** Cloudflare Pages free plan, or a paid Vercel plan (Vercel Hobby is noncommercial; GitHub Pages is not suitable for an e-commerce storefront).
-- **Build system:** none; static `index.html`, `assets/store-config.js` and `guides/` pages.
-- **Sales attribution:** purchase links include `utm_source=clearquote_site&utm_medium=website&utm_campaign=launch`; this is not an automatic website visitor counter.
-- **Measurement:** use real host analytics for visits and Gumroad's transaction dashboard/API for purchases. Do not compute conversion rates until traffic and sales are both available.
+ClearQuote Studio helps independent freelancers plan project prices, estimate client deposits, and understand quotes and invoices without a subscription.
 
-## Product integrity / privacy
+## Try the free tools
 
-The marketing site does not contain the paid ClearQuote Studio ZIP. Checkout is handled by Gumroad. No card details, customer lists, cookies, analytics vendor IDs, account credentials or access tokens should be committed to this repository.
+- [Freelance project pricing calculator](https://wizekin.web.app/clearquote/#calculator) — estimate work, expenses, contingencies, discounts, tax and deposits.
+- [Freelance hourly rate calculator](https://wizekin.web.app/clearquote/guides/freelance-hourly-rate-calculator.html) — find a planning baseline from earnings targets and billable capacity.
+- [Freelance deposit calculator](https://wizekin.web.app/clearquote/guides/freelance-deposit-calculator.html) — split a project total into an upfront payment and remaining balance.
+- [How to write a freelance quote](https://wizekin.web.app/clearquote/guides/how-to-create-a-freelance-quote.html) — checklist and worked example.
+- [How to price a freelance project](https://wizekin.web.app/clearquote/guides/how-to-price-a-freelance-project.html) — estimation workflow.
 
-## Launch checklist
+The calculators run in the browser with no login; calculator entries are not submitted to the site's server.
 
-1. Confirm seller identity, payout method and support contact in Gumroad Settings.
-2. Replace the seller-facing upload ZIP name with `ClearQuote_Studio_v1.1.zip` on Gumroad if not already replaced; leave the paid files private.
-3. Deploy the public website on an authorized commercial-compatible host.
-4. Visit the published site, run the free calculator, open all guide links and test that Buy goes to the correct $3 Gumroad checkout.
-5. Publish educational posts only in communities that allow relevant product links; track visits and sales weekly.
+## Optional $3 downloadable toolkit
+
+The [ClearQuote Studio Gumroad listing](https://wizekin.gumroad.com/l/wnmrl) offers an HTML-based downloadable quote and invoice toolkit at an introductory $3 one-time price (subject to checkout verification). It creates printable client documents, stores drafts locally and supports JSON backup. This is not a bookkeeping, legal, or tax compliance service.
+
+## Project information
+
+- This public repository holds the **website, calculators and educational guides**, not paid download files.
+- Site source is published from the `main` branch and deployed via GitHub Actions to Firebase Hosting at `https://wizekin.web.app/clearquote/`.
+- Static website source: `public/clearquote/`.
+- Root sitemap: https://wizekin.web.app/sitemap.xml
+- Organic/free promotion materials: [marketing/free-promotion-kit.md](marketing/free-promotion-kit.md)
+- Please use the live site's contact-free workflows rather than submitting personal financial information; ordinary access logs may be processed by the host.
+
+If the calculator helps you, sharing the free link with another freelancer is appreciated. Feedback and reproducible site issues can be reported through GitHub issues.
+
+## Scope
+
+Example rates are illustrative rather than market recommendations. The tools are not financial, tax or legal advice. Gumroad processes toolkit purchases and digital delivery.
