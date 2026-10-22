@@ -2,7 +2,6 @@
   "name": "clearquote-studio",
   "compatibility_date": "2026-10-22",
   "assets": {
-    "directory": "./",
-    "exclude": [".git/**", ".wrangler/**", "wrangler.jsonc", "README.md", "marketing/**", "netlify.toml"]
+    "directory": "./"
   }
 }
