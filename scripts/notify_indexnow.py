@@ -19,7 +19,7 @@ HOST = "wizekin.web.app"
 ORIGIN = f"https://{HOST}"
 KEY = "6b3793f9ef8f49a0c793825596b91023"
 KEY_FILE = f"public/{KEY}.txt"
-SITEMAP_FILE = Path("public/clearquote/sitemap.xml")
+SITEMAP_FILE = Path("public/sitemap.xml")
 
 
 def changed_paths() -> set[str]:
@@ -36,12 +36,14 @@ def sitemap_urls() -> list[str]:
     urls = [
         e.text.strip()
         for e in root.findall("s:url/s:loc", xmlns)
-        if e.text and e.text.strip().startswith(f"{ORIGIN}/clearquote/")
+        if e.text and (e.text.strip() == f"{ORIGIN}/" or e.text.strip().startswith(f"{ORIGIN}/clearquote/"))
     ]
     return sorted(set(urls))
 
 
 def canonical_url(source_path: str) -> str | None:
+    if source_path == "public/index.html":
+        return f"{ORIGIN}/"
     if not source_path.startswith("public/clearquote/") or not source_path.endswith(".html"):
         return None
     if source_path == "public/clearquote/index.html":
