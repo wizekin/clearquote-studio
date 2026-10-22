@@ -10,6 +10,10 @@
 - How to write a client quote: https://wizekin.web.app/clearquote/guides/how-to-create-a-freelance-quote.html
 - Optional toolkit: https://wizekin.gumroad.com/l/wnmrl (the site advertises an introductory $3 one-time price; confirm checkout before publishing price externally).
 
+- Free website quote calculator: https://wizekin.web.app/clearquote/guides/website-project-pricing-calculator.html
+- Free project profit margin calculator: https://wizekin.web.app/clearquote/guides/freelance-project-profit-margin-calculator.html
+- Hourly vs fixed-price guide: https://wizekin.web.app/clearquote/guides/hourly-vs-fixed-price-freelancing.html
+
 ### Positioning
 - **For:** web developers, freelance designers, consultants and new independent service providers.
 - **Free value:** calculate costs, contingency, discounts, taxes, deposit and planning hourly rate. No account needed; inputs remain local to browser.

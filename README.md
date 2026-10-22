@@ -11,6 +11,9 @@ ClearQuote Studio helps independent freelancers plan project prices, estimate cl
 - [Freelance deposit calculator](https://wizekin.web.app/clearquote/guides/freelance-deposit-calculator.html) — split a project total into an upfront payment and remaining balance.
 - [How to write a freelance quote](https://wizekin.web.app/clearquote/guides/how-to-create-a-freelance-quote.html) — checklist and worked example.
 - [How to price a freelance project](https://wizekin.web.app/clearquote/guides/how-to-price-a-freelance-project.html) — estimation workflow.
+- [Website project pricing calculator](https://wizekin.web.app/clearquote/guides/website-project-pricing-calculator.html) — quote a website from pages, project hours, expenses and payment terms.
+- [Freelance profit margin calculator](https://wizekin.web.app/clearquote/guides/freelance-project-profit-margin-calculator.html) — estimate margin after time costs, overhead and payment fees; calculate a target-margin quote.
+- [Hourly vs fixed-price freelancing](https://wizekin.web.app/clearquote/guides/hourly-vs-fixed-price-freelancing.html) — compare billing models with a worked example.
 
 The calculators run in the browser with no login; calculator entries are not submitted to the site's server.
 
