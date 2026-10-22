@@ -13,7 +13,7 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "no-cache"
+            "value": "no-cache, no-store, max-age=0, must-revalidate"
           }
         ]
       },
@@ -22,7 +22,25 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "no-cache"
+            "value": "no-cache, no-store, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/clearquote/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, max-age=0, must-revalidate"
           }
         ]
       }
