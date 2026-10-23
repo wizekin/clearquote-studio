@@ -31,6 +31,22 @@ for slug in ['craftcost','stocksimple','lessonsheet']:
    assert target.is_file(),(path,ref)
   count+=1
 for path in [* (PUBLIC/'studio-assets').glob('*.js'),*(PUBLIC/slug/'app.js'for slug in ['craftcost','stocksimple','lessonsheet'])]:subprocess.run(['node','--check',str(path)],check=True)
+appearance_pages=0
+for path in PUBLIC.rglob('*.html'):
+ text=path.read_text()
+ if 'data-product=' not in text:continue
+ parser=Page();parser.feed(text)
+ assert text.count('/studio-assets/themes.js')==1,(path,'Appearance script missing or duplicated')
+ assert text.count('/studio-assets/themes.css')==1,(path,'Appearance styles missing or duplicated')
+ for ref in parser.refs:
+  u=urlparse(ref)
+  if u.scheme or u.netloc or not u.path:continue
+  target=(PUBLIC/unquote(u.path.lstrip('/')))if u.path.startswith('/')else path.parent/unquote(u.path)
+  if target.is_dir():target=target/'index.html'
+  assert target.is_file(),(path,ref)
+ appearance_pages+=1
+assert appearance_pages==len(urls),(appearance_pages,len(urls))
 assert all((PUBLIC/slug/'index.html').is_file()for slug in ['craftcost','stocksimple','lessonsheet'])
 assert 'premium'not in str([p for p in PUBLIC.rglob('*.zip')])
 print(f'Checked {count} new pages: metadata, canonical URLs, sitemap, links, IDs, and JavaScript syntax.')
+print(f'Checked appearance assets, links and IDs on {appearance_pages} homepage, product and guide pages.')
