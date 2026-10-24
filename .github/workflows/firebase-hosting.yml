@@ -36,7 +36,7 @@ jobs:
 
       - name: Check portfolio calculations and pages
         run: |
-          node --test tests/models.test.cjs
+          node --test tests/models.test.cjs tests/collection.test.cjs
           python3 scripts/check_portfolio.py
 
       - name: Deploy to Firebase Hosting
