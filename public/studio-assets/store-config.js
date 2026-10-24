@@ -1,2 +1,2 @@
-// Publish verified purchase URLs only after upload, delivery and checkout checks.
-window.WizekinStores = {craftcost:null,stocksimple:null,lessonsheet:null};
+// Public checkout URLs. Files for sale are not served by Firebase.
+window.WizekinStores={craftcost:'https://wizekin.gumroad.com/l/hsoktq',stocksimple:'https://wizekin.gumroad.com/l/ubwan',lessonsheet:'https://wizekin.gumroad.com/l/vukdh',framemint:'https://wizekin.gumroad.com/l/framemint-offline',studymap:'https://wizekin.gumroad.com/l/studymap-offline',labelleaf:'https://wizekin.gumroad.com/l/labelleaf-offline'};

@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '22'
       - name: Verify calculation invariants
-        run: node --test tests/models.test.cjs
+        run: node --test tests/models.test.cjs tests/collection.test.cjs
       - name: Check pages and metadata
         run: python3 scripts/check_portfolio.py
       - name: Check live pages on scheduled runs

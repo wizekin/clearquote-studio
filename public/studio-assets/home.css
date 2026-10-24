@@ -5,3 +5,5 @@
 @media print{.home-nav,.home-footer,.home-actions{display:none}.home-wrap{width:100%}.home-hero{padding:0;display:block}.home-collage{display:none}.collection-grid{grid-template-columns:repeat(2,1fr)}.product-card{break-inside:avoid;box-shadow:none}}
 
 @media(max-width:440px){.home-nav .nav-cta{display:none}.home-nav nav{white-space:nowrap}}
+
+html[data-theme=original] .framemint-art{background:#e1ede1;color:#286448}html[data-theme=original] .studymap-art{background:#f3efd8;color:#385d96}html[data-theme=original] .labelleaf-art{background:#f6e2d2;color:#a04c32}

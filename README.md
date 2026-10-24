@@ -44,3 +44,11 @@ Example rates are illustrative rather than market recommendations. The tools are
 - [LessonSheet Studio](https://wizekin.web.app/lessonsheet/): printable arithmetic and answer keys.
 
 All three public tools are free and run in the browser. Separate offline editions are packaged privately; their purchase links remain inactive until real listings and delivery are verified. See [portfolio formulas and operations](docs/PORTFOLIO.md). Calculation and page checks run before Firebase deploys. A separate daily availability workflow uses a standard public-repository runner.
+
+## Wizekin additions — 24 October 2026
+
+- [FrameMint](https://wizekin.web.app/framemint/): browser-local product photo framing and image exports.
+- [StudyMap](https://wizekin.web.app/studymap/): weighted study timetables with print, CSV and calendar exports.
+- [LabelLeaf](https://wizekin.web.app/labelleaf/): printable descriptive labels on A4 and Letter cut sheets.
+
+Each product has its own light visual design, a practical guide, and the shared six-theme side chooser. New models are tested with `node --test tests/collection.test.cjs`. Paid offline files stay outside this repository. Existing published CraftCost, StockSimple and LessonSheet store links are now connected.

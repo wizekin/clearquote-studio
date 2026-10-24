@@ -18,7 +18,7 @@ class Page(HTMLParser):
    if a.get(k):self.refs.append(a[k])
 urls={e.text for e in ET.parse(PUBLIC/'sitemap.xml').getroot().iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
 count=0
-for slug in ['craftcost','stocksimple','lessonsheet']:
+for slug in ['craftcost','stocksimple','lessonsheet','framemint','studymap','labelleaf']:
  for path in (PUBLIC/slug).rglob('*.html'):
   parser=Page();parser.feed(path.read_text());assert parser.title and parser.description,path;assert len(parser.canonical)==1,path
   expected='https://wizekin.web.app/'+path.relative_to(PUBLIC).as_posix();expected=expected.removesuffix('index.html')

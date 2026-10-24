@@ -6,7 +6,7 @@ Three new browser tools live under `/craftcost/`, `/stocksimple/`, and `/lessons
 
 The free apps calculate or generate a single result. Separate offline editions add saved work and reusable exports. Paid packages and their source stay outside this public repository. Never commit those packages or store secrets here.
 
-`public/studio-assets/store-config.js` deliberately contains null purchase links until real listings, paid file delivery and checkout have been verified. To activate one, replace only its null with the actual HTTPS Gumroad product URL. There is no placeholder checkout and no claim that an unavailable edition can be bought.
+`public/studio-assets/store-config.js` holds the public Gumroad listing URLs. CraftCost, StockSimple and LessonSheet were confirmed published with delivery files on 24 October 2026 and their links activated. New product links are activated after their actual listings and uploaded files are verified. A published listing and owner download check do not establish a real paid sale or successful payout.
 
 ## Formulas and examples
 
@@ -19,5 +19,11 @@ LessonSheet: seeded deterministic arithmetic. Subtraction is nonnegative. Divisi
 ## Operations
 
 Run `node --test tests/models.test.cjs` and `python3 scripts/check_portfolio.py` before deployment. The daily health workflow checks public availability and shared calculations; GitHub may suspend schedules on inactive public repositories. It does not fix bugs, guarantee traffic, read Firebase quotas, handle customers, or create sales. No paid runner, build artifact storage, external AI API, ad network or database is added.
+
+## 24 October additions
+
+FrameMint (`/framemint/`), StudyMap (`/studymap/`) and LabelLeaf (`/labelleaf/`) each add a working free tool, distinct light design, practical guide and separate offline download. The homepage now links seven products. New calculations and exports use `collection-models.js`; run `node --test tests/collection.test.cjs` as well. Both existing GitHub workflows include these tests, and daily availability checks include all three URLs.
+
+The new paid workspace and batch code, standalone HTML applications, and ZIP packages are held outside this public repository. The public site includes only the free-tool runtime. Store checkout and digital delivery use Gumroad; no payment secrets or purchaser records are stored in Firebase.
 
 The business design excludes interest calculations, gambling, prohibited product examples, fabricated testimonials and uncontrolled advertisements. This is a conservative design boundary, not scholarly certification of every commercial arrangement.
