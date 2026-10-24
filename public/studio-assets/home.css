@@ -7,3 +7,5 @@
 @media(max-width:440px){.home-nav .nav-cta{display:none}.home-nav nav{white-space:nowrap}}
 
 html[data-theme=original] .framemint-art{background:#e1ede1;color:#286448}html[data-theme=original] .studymap-art{background:#f3efd8;color:#385d96}html[data-theme=original] .labelleaf-art{background:#f6e2d2;color:#a04c32}
+
+html[data-theme=original] .panelnest-art{background:#eee6d9;color:#9a522f}
