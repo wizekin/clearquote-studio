@@ -1,7 +1,8 @@
 {
   "name": "clearquote-studio",
   "compatibility_date": "2026-10-22",
+  "previews": {},
   "assets": {
-    "directory": "./"
+    "directory": "./public"
   }
 }
